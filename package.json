@@ -1,0 +1,22 @@
+{
+	"name": "wwwscreenshot",
+	"description": "A simple node app to take screenshots of any web site",
+	"repository": {
+		"url": "https://github.com/shakeelosmani",
+		"type": "git"
+	},
+	"license": "MIT",
+	"version": "1.0.0",
+	"author": {
+		"name": "Shakeel Osmani",
+		"email": "shakeel.osmani@gmail.com",
+		"url": "https://shakeelosmani.wordpress.com"
+	},
+	"dependencies": {
+		"js-crawler": "^0.3.21",
+		"puppeteer": "^1.12.2"
+	},
+	"scripts": {
+		"start": "node index.js"
+	}
+}
