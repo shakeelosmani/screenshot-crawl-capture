@@ -78,7 +78,7 @@ function writeOutputHtml(data) {
 		<!doctype html>
 		<html lang="en">
 			<head>
-				<title>Screen shots of AmeriSave Website as on ${new Date().toLocaleDateString()}</title>
+				<title>Screen shots of the Website as on ${new Date().toLocaleDateString()}</title>
 				<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 				<style>
 					body {
