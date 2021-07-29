@@ -137,7 +137,7 @@ function writeOutputHtml(data) {
 	main entry point of the application, chains all thenables and calls the chain of fns
 	returns void
 */
-function main() {
+function main(url) {
 	let fs = require('fs');
 	let dt = new Date();
 	let mainDir = './output';
@@ -148,7 +148,7 @@ function main() {
 	if (!fs.existsSync(contnetDir)) {
 		fs.mkdirSync(contnetDir);
 	}
-	startRoot("https://www.paintingwithatwist.com/").then(function (crawledUrl) {
+	startRoot(url).then(function (crawledUrl) {
 		let resultSet = processData(crawledUrl);
 		let dataArray = [];
 		let innerCounter = 0;
@@ -169,5 +169,9 @@ function main() {
 }
 
 //just call the main method
-main();
-
+let url = process.argv[0]
+if(!url) {
+ throw new Error("Must send an url")	
+} else{
+  main(url);
+}
